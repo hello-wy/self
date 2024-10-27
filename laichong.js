@@ -52,8 +52,36 @@ class UserInfo {
         }
     
     }
+    async sign() {
+        try {
+            let options = {
+                fn: "签到",
+                method: "get",
+                url: `https://shop.laichon.com/api/v1/task/signComplete`,
+                headers: this.headers,
+            }
+            let { body: result } = await $.httpRequest(options);
+            // console.log(options);
+            // console.log(result);
+            if (result.code == 1) {
+                if (result.data.isSign == 0) {
+                    //未签到
+                    $.log(`未签到`)
+                    this.signStatus = 0
+                } else {
+                    $.log(`已签到`)
+                    this.signStatus = 1
+                }
+            } else {
+                this.signStatus = 2
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
     async task_sign() {
         try {
+            this.sign()
             let options = {
                 fn: "签到",
                 method: "get",
@@ -61,8 +89,8 @@ class UserInfo {
                 headers: this.headers,
             }
             let { body: result } = await $.httpRequest(options);
-            //console.log(options);
-            //console.log(result);
+            // console.log(options);
+            // console.log(result);
             if (result.code == 1) {
                 if (result.data.isSign == 0) {
                     //未签到
@@ -88,11 +116,11 @@ class UserInfo {
                 headers: this.headers,
             }
             let { body: result } = await $.httpRequest(options);
-            //console.log(options);
-            //console.log(result);
+            // console.log(options);
+            // console.log(result);
             if(result.code_key == "success"){
                 this.ckStatus = true
-                $.log(`当前[${result.data.mobile} 积分[${result.data.point}]]`)
+                $.log(`当前[${result.data.mobile} 积分[${result.data.points}]]`)
             }else {
                 this.ckStatus = false
                 console.log(result);
