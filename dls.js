@@ -95,6 +95,19 @@ class _0xd4f793 {
       console.log(_0x49c922);
     }
   }
+  async ["Lottery"]() {
+    try {
+      let _0x2a7e65 = "Lottery",
+        _0x2c3fa0 = "get",
+        _0x329324 = this.apiHost + "/activity.lottery/draw?snId=379448676098688&channelSn=0",
+        _0x22712b = "";
+      await this.taskApi(_0x2a7e65, _0x2c3fa0, _0x329324, _0x22712b).then(async _0x13d880 => {
+        _0x13d880?.["status"] === 200 ? (this.valid = true, console.log("lottery 账号[" + this.index + "] 查询积分成功，可用积分：" + _0x13d880?.["data"]?.["userInfo"]?.["points"] + "，总积分：" + _0x13d880?.["data"]?.["userInfo"]?.["points_total"])) : (console.log("lottery  账号[" + this.index + "] 查询积分失败：" + (_0x13d880?.["message"] || JSON.stringify(_0x13d880))), this.valid = false);
+      });
+    } catch (_0xd92dc2) {
+      console.log(_0xd92dc2);
+    }
+  }
   async ["Share"]() {
     try {
       let _0x1d42ce = "Share",
@@ -112,6 +125,7 @@ class _0xd4f793 {
     try {
       console.log("\n============= 账号[" + this.index + "] 开始执行 签到任务=============");
       await this.Sign();
+      await this.Lottery();
       await _0x4c47ae.wait(Math.random() * 200);
     } catch (_0x2f2471) {
       console.log(_0x2f2471);
