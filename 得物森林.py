@@ -1001,7 +1001,6 @@ def main():
             f'dewu_x_auth_token({ck_count}个)与dewu_sk({sk_count}个)数量不相等')
         return
     myprint(f'获取到{ck_count}个账号！')
-    download_author_share_code()
     # if HELP_SIGNAL == 'True':
     #     myprint('开始获取所有账号助力码')
     #     for index, ck in enumerate(ck_list):
