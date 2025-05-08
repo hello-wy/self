@@ -1,0 +1,14 @@
+2025/04/28-09:33:13.206 3b07 Reusing MANIFEST /Users/wuyang/Documents/self/brower/profile/Default/Local Storage/leveldb/MANIFEST-000001
+2025/04/28-09:33:13.208 3b07 Recovering log #14
+2025/04/28-09:33:13.209 3b07 Reusing old log /Users/wuyang/Documents/self/brower/profile/Default/Local Storage/leveldb/000014.log 
+2025/04/28-09:33:42.666 3b07 Level-0 table #17: started
+2025/04/28-09:33:42.668 3b07 Level-0 table #17: 110218 bytes OK
+2025/04/28-09:33:42.671 3b07 Delete type=0 #14
+2025/04/28-09:33:42.672 3b07 Compacting 4@0 + 0@1 files
+2025/04/28-09:33:42.674 3b07 Generated table #18@0: 22 keys, 107499 bytes
+2025/04/28-09:33:42.674 3b07 Compacted 4@0 + 0@1 files => 107499 bytes
+2025/04/28-09:33:42.675 3b07 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/04/28-09:33:42.675 3b07 Delete type=2 #17
+2025/04/28-09:33:42.675 3b07 Delete type=2 #7
+2025/04/28-09:33:42.675 3b07 Delete type=2 #13
+2025/04/28-09:33:42.675 3b07 Delete type=2 #11
